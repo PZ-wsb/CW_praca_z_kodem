@@ -7,7 +7,14 @@ on:
     branches: [ main ]
 
 jobs:
-
+  version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: version of docker
+      run: docker version
+    - name: version of python
+      run: python --version
+    
   build-pylint:
     runs-on: ubuntu-latest
     strategy:
